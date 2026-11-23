@@ -5,8 +5,8 @@ const RELATOS = [
   {
     id: "plata",
     titulo: "Plata",
-    etiqueta: "Fábula • 4 escenas",
-    sinopsis: "Marcado desde su nacimiento por una profecía de muerte temprana, un joven lobo aprende bajo un eclipse que el mañana no debe devorar el presente.",
+    etiqueta: "Fábula",
+    sinopsis: "Una fábula sobre el tiempo, la manada y lo que ocurre cuando se deja de mirar solo hacia adelante.",
     colorTema: "#94a3b8",
     escenas: [
       {
@@ -79,13 +79,13 @@ const RELATOS = [
     id: "flores-de-plastico",
     titulo: "Flores de Plástico",
     etiqueta: "Próximamente • Relato",
-    sinopsis: "Una historia sobre lo que permanece intacto frente al paso inexorable del tiempo.",
+    sinopsis: "El tiempo no siempre avanza paso a paso, a veces el destino no está al final del camino, sino en cómo uno llega a él.",
     colorTema: "#d97736",
     escenas: [
       {
         titulo: "Prólogo",
         pistaNombre: "Nocturno en Cenizas (Piano)",
-        audioUrl: "https://archive.org/download/cd_nocturnes_frederic-chopin_0/disc1/02.%20Fr%C3%A9d%C3%A9ric%20Chopin%20-%20Nocturne%20in%20E-flat%20major%2C%20Op.%209%2C%20No.%202.mp3",
+        audioUrl: "https://archive.org/download/radiohead-the-bends_202510/04%20Fake%20Plastic%20Trees.mp3",
         bg: "#120e14",
         accent: "#d97736",
         parrafos: [
