@@ -10,12 +10,15 @@
 </head>
 <body>
 
-  <!-- Portada de entrada -->
+<!-- Portada de entrada -->
   <div id="prologo">
     <div class="emblema">fxapollo presenta</div>
     <h1>La Pluma del Fénix</h1>
     <p>Relatos diseñados para leerse despacio. Sin anuncios ni cortes bruscos: cada escena transforma la atmósfera mientras avanzas.</p>
-    <button class="btn-iniciar" onclick="comenzarLectura()">Comenzar lectura con sonido</button>
+    <div class="acciones-prologo">
+      <button class="btn-iniciar" onclick="comenzarLectura(true)">Comenzar lectura con sonido</button>
+      <button class="btn-silencio" onclick="comenzarLectura(false)">Leer en silencio</button>
+    </div>
   </div>
 
   <!-- Barra superior -->
