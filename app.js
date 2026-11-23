@@ -146,16 +146,25 @@ function abrirRelato(id) {
   const lector = document.getElementById('vista-lector');
   lector.classList.remove('oculto');
 
-  lector.innerHTML = relato.escenas.map(escena => `
-    <section class="escena"
-             data-titulo="${escena.pistaNombre}"
-             data-audio="${escena.audioUrl}"
-             data-bg="${escena.bg}"
-             data-accent="${escena.accent}">
-      <h2>${escena.titulo}</h2>
-      ${escena.parrafos.map(p => `<p>${p}</p>`).join('')}
-    </section>
-  `).join('') + `
+  lector.innerHTML = relato.escenas.map(escena => {
+    const imgHTML = escena.imagen
+      ? `<img src="${escena.imagen}" alt="${escena.titulo}" class="ilustracion-escena">`
+      : '';
+    const alInicio = escena.posicionImagen === 'inicio';
+
+    return `
+      <section class="escena"
+               data-titulo="${escena.pistaNombre}"
+               data-audio="${escena.audioUrl}"
+               data-bg="${escena.bg}"
+               data-accent="${escena.accent}">
+        ${alInicio ? imgHTML : ''}
+        <h2>${escena.titulo}</h2>
+        ${escena.parrafos.map(p => `<p>${p}</p>`).join('')}
+        ${!alInicio ? imgHTML : ''}
+      </section>
+    `;
+  }).join('') + `
     <div class="pie-relato">
       <button class="btn-iniciar" onclick="volverAlMenu()">← Volver a todos los relatos</button>
     </div>
@@ -168,9 +177,21 @@ function abrirRelato(id) {
         activarEscena(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.45 });
 
   document.querySelectorAll('.escena').forEach(escena => observer.observe(escena));
+
+  // Observer dedicado para revelar cada ilustración sin spoilers
+  const imgObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revelada');
+        imgObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.35 });
+
+  document.querySelectorAll('.ilustracion-escena').forEach(img => imgObserver.observe(img));
 
   const primera = document.querySelector('.escena');
   if (primera) activarEscena(primera);
