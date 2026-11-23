@@ -10,20 +10,23 @@
 </head>
 <body>
 
-<!-- Portada de entrada -->
+  <!-- 1. Portada de entrada -->
   <div id="prologo">
     <div class="emblema">fxapollo presenta</div>
     <h1>La Pluma del Fénix</h1>
     <p>Relatos diseñados para leerse despacio. Sin anuncios ni cortes bruscos: cada escena transforma la atmósfera mientras avanzas.</p>
     <div class="acciones-prologo">
-      <button class="btn-iniciar" onclick="comenzarLectura(true)">Comenzar lectura con sonido</button>
-      <button class="btn-silencio" onclick="comenzarLectura(false)">Leer en silencio</button>
+      <button class="btn-iniciar" onclick="comenzarExperiencia(true)">Entrar con sonido</button>
+      <button class="btn-silencio" onclick="comenzarExperiencia(false)">Entrar en silencio</button>
     </div>
   </div>
 
-  <!-- Barra superior -->
-  <header>
-    <div class="marca">La Pluma del Fénix</div>
+  <!-- Navbar inteligente (se oculta al bajar en la lectura) -->
+  <header id="navbar">
+    <div class="nav-izquierda">
+      <button id="btn-volver" class="btn-pill oculto" onclick="volverAlMenu()">← Relatos</button>
+      <span class="marca" onclick="volverAlMenu()">La Pluma del Fénix</span>
+    </div>
     <div class="controles">
       <span id="pista-actual">En silencio</span>
       <button class="btn-pill" onclick="toggleBuscador()">Buscar música</button>
@@ -39,8 +42,18 @@
     </div>
   </div>
 
-  <!-- Contenedor donde app.js inyecta automáticamente tus escritos -->
-  <main id="lector-escenas"></main>
+  <!-- 2. Vista Menú de Relatos -->
+  <section id="vista-menu" class="oculto">
+    <div class="encabezado-menu">
+      <span class="subtitulo-menu">Biblioteca</span>
+      <h2>Relatos y Escritos</h2>
+      <p>Elige una historia para sumergirte en su atmósfera.</p>
+    </div>
+    <div id="grid-relatos" class="grid-relatos"></div>
+  </section>
+
+  <!-- 3. Vista Lector Inmersivo -->
+  <main id="vista-lector" class="oculto"></main>
 
   <script src="app.js"></script>
 </body>
