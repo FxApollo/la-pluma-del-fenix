@@ -1,0 +1,211 @@
+:root {
+  --bg: #0c0b0e;
+  --text: #e8e4dc;
+  --accent: #d97736;
+  --muted: #8a837c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  transition: background-color 2.2s ease, color 1.8s ease;
+  overflow-x: hidden;
+}
+
+#prologo {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #1a1412 0%, #09080a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 100;
+  transition: opacity 1.2s ease, visibility 1.2s ease;
+}
+
+#prologo.oculto {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.emblema {
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1rem;
+}
+
+#prologo h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 400;
+  margin-bottom: 1rem;
+  letter-spacing: 0.03em;
+}
+
+#prologo p {
+  max-width: 480px;
+  font-size: 1.25rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.btn-iniciar {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--text);
+  padding: 0.9rem 2.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn-iniciar:hover {
+  background: var(--accent);
+  color: #0c0b0e;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  z-index: 50;
+  background: linear-gradient(to bottom, rgba(12,11,14,0.9), transparent);
+}
+
+.marca {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--muted);
+}
+
+.btn-pill {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#panel-buscador {
+  position: fixed;
+  top: 4.5rem;
+  right: 2rem;
+  width: 340px;
+  max-width: 90vw;
+  background: #141318;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 1rem;
+  z-index: 60;
+  font-family: 'Inter', sans-serif;
+  display: none;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+#panel-buscador.abierto { display: block; }
+
+#input-busqueda {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: #0c0b0e;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+#resultados-musica {
+  max-height: 240px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.estado-busqueda {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.item-pista {
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.03);
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: background 0.2s;
+}
+
+.item-pista:hover { background: rgba(217,119,54,0.2); }
+.item-pista strong { display: block; color: var(--text); }
+.item-pista span { color: var(--muted); font-size: 0.7rem; }
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 18vh 1.5rem 25vh;
+}
+
+.escena {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.35;
+  transform: translateY(15px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+  margin-bottom: 10vh;
+}
+
+.escena.activa {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.escena h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+.escena p {
+  font-size: 1.45rem;
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
