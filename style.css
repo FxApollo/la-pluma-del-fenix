@@ -209,3 +209,27 @@ main {
   line-height: 1.85;
   margin-bottom: 1.5rem;
 }
+
+.acciones-prologo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-silencio {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.btn-silencio:hover {
+  color: var(--text);
+}
