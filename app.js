@@ -3,32 +3,66 @@
 // ==========================================
 const RELATOS = [
   {
-    id: "colina-melancolica",
-    titulo: "Crónicas de la Colina",
-    etiqueta: "Relato de prueba • 2 escenas",
-    sinopsis: "Un recorrido nocturno sobre la memoria, el fuego que transforma y la persistencia de los recuerdos.",
-    colorTema: "#58a6ff",
+    id: "plata",
+    titulo: "Plata",
+    etiqueta: "Fábula • 4 escenas",
+    sinopsis: "Marcado desde su nacimiento por una profecía de muerte temprana, un joven lobo aprende bajo un eclipse que el mañana no debe devorar el presente.",
+    colorTema: "#94a3b8",
     escenas: [
       {
-        titulo: "I. La Colina Melancólica",
-        pistaNombre: "Gorillaz - On Melancholy Hill",
-        audioUrl: "https://archive.org/download/gorillaz-songs-compilation/Gorillaz%20-%20On%20Melancholy%20Hill.mp3",
-        bg: "#0d1117",
-        accent: "#58a6ff",
+        titulo: "I. La Profecía",
+        pistaNombre: "Satie - Gnossienne No. 1 (Piano)",
+        audioUrl: "https://archive.org/download/ErikSatieGnossienneNo.1/Erik%20Satie%20-%20Gnossienne%20No.%201.mp3",
+        bg: "#0b101b",
+        accent: "#94a3b8",
         parrafos: [
-          "Hay recuerdos que no pesan por lo que fueron, sino por la exactitud con la que regresan cuando la ciudad se queda en silencio.",
-          "Al bajar por este texto, notarás cómo la atmósfera muta sin anuncios ni pausas forzadas, acompañando el pulso de cada escena."
+          "Nació bajo luna llena, la época en la que se recibían las profecías, así que se esperaba que el cachorro fuera un lobo líder, un lobo único… pero el lobo chamán ya había hablado: el lobezno moriría en 3 años, menos de la mitad del promedio de vida de cualquier lobo. Solo esa era la profecía.",
+          "Pese a ello, creció como cualquier otro cachorro en la manada, exceptuando las veces que los demás cuchicheaban “muerte” o “maldito”, o cómo a veces, en silencio, la lástima aparecía en los ojos de quien lo observaba; a veces incluso en los de su propia madre, quien luego de noche aullaba especialmente fuerte a la luna.",
+          "Ya al año se dio cuenta plenamente de su maldición. Era inevitable: moriría. Se había negado a creerlo completamente —quizá se confundió el chamán, quizá la profecía fallaría—, pero descorazonado vio cómo se cumplían una a una todas las demás profecías: vio cómo el invencible Patafuerte se quebraba ambas patas en una cacería, también vio cuando Ojogris, el alfa, se echó a dormir exactamente una luna llena y nunca más despertó…"
         ]
       },
       {
-        titulo: "II. Cenizas y Tiempo",
-        pistaNombre: "Nocturno en Cenizas (Piano)",
+        titulo: "II. El Risco",
+        pistaNombre: "Chopin - Preludio en Mi menor, Op. 28 No. 4",
+        audioUrl: "https://archive.org/download/ChopinPreludeOp.28No.4InEMinor/Chopin%20-%20Prelude%20Op.%2028%20No.%204%20in%20E%20Minor.mp3",
+        bg: "#0f0e13",
+        accent: "#7c8594",
+        parrafos: [
+          "…Y la vida comenzó a saber más amarga a cada sorbo, y el mañana oscurecía todo hoy.",
+          "Cada vez veía con mayor resentimiento a la luna, aquella que lo había maldecido. El viento que antes había amado tanto ya solo le recordaba el frío de la muerte, pero sobre todo le atormentaba el hecho de crear lazos con el resto: pronto se iría para siempre. ¿Cómo amarlos solo para dejarlos sufriendo? —Qué vacía y hueca existencia —se dijo.",
+          "Decidió entonces retar al destino: no moriría a los 3 años, moriría ahora. Y una noche de luna llena, mientras todos se acercaban a escuchar las profecías del chamán, se marchó. Subiría el acantilado y desde allí saltaría.",
+          "Una sombra lo observó desde que dejó el territorio y lo siguió mientras cruzaba el río, mientras escalaba el acantilado, no muy lejos para no perderlo de vista, ni muy cerca, hasta cuando ya cansado el lobo llegó al risco y confundido miró al abismo.",
+          "—Queda —susurró la sombra—. Quédate.",
+          "—¿Madre? —dijo sorprendido el lobo por la distancia que esta había andado.",
+          "—Solo hoy quédate, Plata, aunque la luna llena esté nublada, ves cómo el viento nos sopla.",
+          "—No importa cuántos hoy me quede —dijo el lobo—, mis mañanas no son ya ni la mitad de las de los demás, y madre, tú me verías morir mientras los hijos de los otros lobos aún aullarían. No quiero eso para ti, porque lo entiendo, sé qué es que lo que una vez fue bello se vuelva condena… Mientras menos te acostumbres a mí, mejor.",
+          "—Nunca me dejaría de acostumbrar, ni hoy, ni hace 2 años, ni dentro de mil; no pienso en ello, ni cuando recibí la profecía, ni cuando crecías, ni cuando con miedo te he visto venir al acantilado. No sé de tus mañanas, hijo mío, pero hoy, hoy hay Luna, y ¿sientes lo suave que el viento te toca? Siempre creí que era una forma en que Ella nos toca. Y durante cada luna llena, sabiendo que no podrías vivir más de 3 años, solo le rogaba a la luna que saborearas cada hoy. He venido solo para pedirte que te quedes hoy, sonriamos y aullemos solo hoy, solo en esta luna."
+        ]
+      },
+      {
+        titulo: "III. El Eclipse",
+        pistaNombre: "Debussy - Clair de Lune",
+        audioUrl: "https://archive.org/download/ClairDeLune_201305/Clair%20de%20Lune.mp3",
+        bg: "#141022",
+        accent: "#eab308",
+        parrafos: [
+          "—Si la luna te escuchara, ¿por qué nunca respondió?",
+          "Sin respuestas, y sabiendo que ni él, ni su madre, ni el chamán y quizá ni la Luna las tenían, el joven lobo aulló y aulló con el lamento que había guardado en su corazón durante todo ese tiempo, y el eco de su lamento llenó el bosque.",
+          "Entonces, la luna llena se oscureció y se volvió un perfecto anillo… ¡un eclipse! Y el viento sopló con más fuerza, empujándolo de vuelta a lo seguro, pero ni un paso más.",
+          "Y los dos lobos vieron atónitos esto, y se dejaron acariciar por el viento que secó sus lágrimas y aullaron al eclipse; pero dejó de ser de lamento, ya que ya no importaban ni las preguntas ni las respuestas...",
+          "Y el eco de sus aullidos fue acompañado por diferentes aullidos desde distintas partes del bosque."
+        ]
+      },
+      {
+        titulo: "IV. Solo Hoy",
+        pistaNombre: "Chopin - Nocturno Op. 9 No. 2",
         audioUrl: "https://archive.org/download/cd_nocturnes_frederic-chopin_0/disc1/02.%20Fr%C3%A9d%C3%A9ric%20Chopin%20-%20Nocturne%20in%20E-flat%20major%2C%20Op.%209%2C%20No.%202.mp3",
-        bg: "#160f0d",
+        bg: "#18120e",
         accent: "#e07a3f",
         parrafos: [
-          "Todo lo que arde deja una forma distinta en la memoria. El fénix no vuelve a ser el mismo ave: conserva la cicatriz de haber sido fuego.",
-          "Aquí la segunda pista entra con un crossfade real mientras la canción anterior se desvanece suavemente."
+          "—Solo hoy no me iré —dijo el lobo a su madre—. Solo hoy la luna habla... y aunque no lo hiciese, y aunque no hubiese ningún eclipse y aunque no hubiese nunca más Luna... solo hoy hay viento… Soy libre... el mañana ya no me devora...",
+          "Al día siguiente, mientras corría el agradable viento por su pelaje y veía cómo algunas nubes se parecían a la luna en forma de anillo, se repitió a sí mismo: solo hoy no.",
+          "El lobo murió exactamente a los 3 años, defendiendo a la manada de un grupo de humanos. Fue el más fiero combatiente; dicen que por él se fueron los humanos y nunca más volvieron. Dicen que siempre lo veían feliz disfrutando el viento, o aullando alegre a la luna, o mostrando a los demás lobos cómo sentir el viento, porque ese único e irrepetible viento correría solo Hoy."
         ]
       }
     ]
