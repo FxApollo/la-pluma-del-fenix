@@ -11,6 +11,8 @@ const RELATOS = [
     escenas: [
       {
         titulo: "I. La Profecía",
+        imagen: "plata-1.jpg",
+        posicionImagen: "inicio",
         pistaNombre: "Satie - Gnossienne No. 1 (Piano)",
         audioUrl: "https://archive.org/download/ErikSatieGnossienneNo.1/Erik%20Satie%20-%20Gnossienne%20No.%201.mp3",
         bg: "#0b101b",
@@ -23,6 +25,8 @@ const RELATOS = [
       },
       {
         titulo: "II. El Risco",
+        imagen: "plata-2.jpg",
+        posicionImagen: "final",
         pistaNombre: "Chopin - Preludio en Mi menor, Op. 28 No. 4",
         audioUrl: "https://archive.org/download/ChopinPreludeOp.28No.4InEMinor/Chopin%20-%20Prelude%20Op.%2028%20No.%204%20in%20E%20Minor.mp3",
         bg: "#0f0e13",
@@ -41,6 +45,8 @@ const RELATOS = [
       },
       {
         titulo: "III. El Eclipse",
+        imagen: "plata-3.jpg",
+        posicionImagen: "final",
         pistaNombre: "Debussy - Clair de Lune",
         audioUrl: "https://archive.org/download/ClairDeLune_201305/Clair%20de%20Lune.mp3",
         bg: "#141022",
@@ -55,6 +61,8 @@ const RELATOS = [
       },
       {
         titulo: "IV. Solo Hoy",
+        imagen: "plata-4.jpg",
+        posicionImagen: "final",
         pistaNombre: "Chopin - Nocturno Op. 9 No. 2",
         audioUrl: "https://archive.org/download/cd_nocturnes_frederic-chopin_0/disc1/02.%20Fr%C3%A9d%C3%A9ric%20Chopin%20-%20Nocturne%20in%20E-flat%20major%2C%20Op.%209%2C%20No.%202.mp3",
         bg: "#18120e",
@@ -81,7 +89,7 @@ const RELATOS = [
         bg: "#120e14",
         accent: "#d97736",
         parrafos: [
-          "Espacio reservado para montar las escenas de Flores de Plástico."
+          "Es 27 de diciembre del 2026, En 10 minutos me iré. Estoy sentado frente a las puertas del templo, sostengo una hoja de viejos poemas y mi celular, en él solo veo una foto: eres tu, sin flores"
         ]
       }
     ]
