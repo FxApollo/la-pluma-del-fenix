@@ -84,7 +84,7 @@ const RELATOS = [
     escenas: [
       {
         titulo: "Prólogo",
-        pistaNombre: "Nocturno en Cenizas (Piano)",
+        pistaNombre: "Fake Plastic Trees - Radiohead",
         audioUrl: "https://archive.org/download/radiohead-the-bends_202510/04%20Fake%20Plastic%20Trees.mp3",
         bg: "#120e14",
         accent: "#d97736",
