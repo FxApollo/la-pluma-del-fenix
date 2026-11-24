@@ -13,8 +13,8 @@ const RELATOS = [
         titulo: "I. La Profecía",
         imagen: "plata-1.jpg",
         posicionImagen: "inicio",
-        pistaNombre: "Satie - Gnossienne No. 1 (Piano)",
-        audioUrl: "https://archive.org/download/ErikSatieGnossienneNo.1/Erik%20Satie%20-%20Gnossienne%20No.%201.mp3",
+        pistaNombre: "Orange Warnings - Blood Red Sun",
+        audioUrl: "audio/Orange Warnings - Blood Red Sun.mp3",
         bg: "#0b101b",
         accent: "#94a3b8",
         parrafos: [
@@ -27,8 +27,8 @@ const RELATOS = [
         titulo: "II. El Risco",
         imagen: "plata-2.jpg",
         posicionImagen: "final",
-        pistaNombre: "Chopin - Preludio en Mi menor, Op. 28 No. 4",
-        audioUrl: "https://archive.org/download/ChopinPreludeOp.28No.4InEMinor/Chopin%20-%20Prelude%20Op.%2028%20No.%204%20in%20E%20Minor.mp3",
+        pistaNombre: "Orange Warnings - Blood Red Sun",
+        audioUrl: "audio/Orange Warnings - Blood Red Sun.mp3",
         bg: "#0f0e13",
         accent: "#7c8594",
         parrafos: [
@@ -47,8 +47,8 @@ const RELATOS = [
         titulo: "III. El Eclipse",
         imagen: "plata-3.jpg",
         posicionImagen: "final",
-        pistaNombre: "Debussy - Clair de Lune",
-        audioUrl: "https://archive.org/download/ClairDeLune_201305/Clair%20de%20Lune.mp3",
+        pistaNombre: "Orange Warnings - Blood Red Sun",
+        audioUrl: "audio/Orange Warnings - Blood Red Sun.mp3",
         bg: "#141022",
         accent: "#eab308",
         parrafos: [
@@ -63,8 +63,8 @@ const RELATOS = [
         titulo: "IV. Solo Hoy",
         imagen: "plata-4.jpg",
         posicionImagen: "final",
-        pistaNombre: "Chopin - Nocturno Op. 9 No. 2",
-        audioUrl: "https://archive.org/download/cd_nocturnes_frederic-chopin_0/disc1/02.%20Fr%C3%A9d%C3%A9ric%20Chopin%20-%20Nocturne%20in%20E-flat%20major%2C%20Op.%209%2C%20No.%202.mp3",
+        pistaNombre: "Orange Warnings - Blood Red Sun",
+        audioUrl: "audio/Orange Warnings - Blood Red Sun.mp3",
         bg: "#18120e",
         accent: "#e07a3f",
         parrafos: [
@@ -302,12 +302,14 @@ function toggleMute() {
   } else if (enLectura) {
     const escenaActiva = document.querySelector('.escena.activa') || document.querySelector('.escena');
     if (escenaActiva) {
-      urlActual = "";
-      crossfadeAudio(escenaActiva.dataset.audio, escenaActiva.dataset.titulo);
+      if (urlActual === escenaActiva.dataset.audio && canales[activo].src) {
+        canales[activo].volume = 0.85;
+        canales[activo].play().catch(e => console.log("Esperando interacción:", e));
+        document.getElementById('pista-actual').textContent = escenaActiva.dataset.titulo;
+      } else {
+        crossfadeAudio(escenaActiva.dataset.audio, escenaActiva.dataset.titulo);
+      }
     }
-  } else {
-    document.getElementById('pista-actual').textContent = 'Elige un relato';
-  }
 }
 
 function toggleBuscador() {
