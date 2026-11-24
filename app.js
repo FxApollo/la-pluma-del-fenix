@@ -310,6 +310,9 @@ function toggleMute() {
         crossfadeAudio(escenaActiva.dataset.audio, escenaActiva.dataset.titulo);
       }
     }
+  } else {
+    document.getElementById('pista-actual').textContent = 'Elige un relato';
+  }
 }
 
 function toggleBuscador() {
